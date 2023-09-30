@@ -1,0 +1,8 @@
+server:
+  port: 80
+
+datasource:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/ssm-demo?useSSL=false
+  username: root
+  password: 162278

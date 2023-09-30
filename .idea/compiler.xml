@@ -6,11 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="day1-spring-demo" />
+        <module name="springboot_02_yml" />
+        <module name="springboot_03_mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="day1-spring-demo" target="1.7" />
+      <module name="springboot_02_yml" target="17" />
+      <module name="springboot_03_mybatis" target="17" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot_02_yml" options="-parameters" />
+      <module name="springboot_03_mybatis" options="-parameters" />
+    </option>
   </component>
 </project>
