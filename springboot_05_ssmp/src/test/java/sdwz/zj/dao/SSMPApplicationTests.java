@@ -1,4 +1,4 @@
-package sdwz.zj;
+package sdwz.zj.dao;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
