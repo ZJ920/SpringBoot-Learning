@@ -50,7 +50,6 @@ public class BookServlet1 {
 
     @GetMapping("{id}")
     public Result selectById(@PathVariable int id){
-
         if (id < 1){
             throw new BusinessException(false,"selectById查询输入异常...");
         }
@@ -65,9 +64,20 @@ public class BookServlet1 {
         }
     }
 
+//    @GetMapping("{currentPage}/{pageSize}")
+//    public Result getPage(@PathVariable int currentPage,@PathVariable int pageSize){
+//        System.out.println("经过getPage1");
+//        IPage<Book> page = iBookService.getPage(currentPage, pageSize);
+//        Result result = new Result(true,page);
+//        return result;
+//    }
+
+    //selectConditional
     @GetMapping("{currentPage}/{pageSize}")
-    public Result getPage(@PathVariable int currentPage,@PathVariable int pageSize){
-        IPage<Book> page = iBookService.getPage(currentPage, pageSize);
+    public Result getPage(@PathVariable int currentPage,@PathVariable int pageSize,Book book){
+        System.out.println("经过getPage2");
+        System.out.println("使用了getPage方法");
+        IPage<Book> page = iBookService.getPage(currentPage, pageSize, book);
         Result result = new Result(true,page);
         return result;
     }
